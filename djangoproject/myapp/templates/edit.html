@@ -1,0 +1,16 @@
+<h1>Edit</h1>
+
+<form action="{% url 'update' blog.id %}" method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="title">제목</label><br>
+        <input type="text" id="title" name='title' value="{{blog.title}}"> 
+    </div>
+    <div>
+        <label for="content">내용</label><br>
+    <textarea name="body" id="body" cols="30" rows="10">{{blog.body}}</textarea>
+    </div>
+    <input type="submit" value="수정하기">
+</form>
+
+<a href="{% url 'blog' %}">목록으로</a>

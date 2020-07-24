@@ -1,0 +1,8 @@
+<h1>Blog</h1>
+<a href="{% url 'index' %}">홈으로</a>
+
+{% for blog in blogs.all %}
+    <a href="{% url 'detail' blog.id %}"><h1>{{blog.title}}</h1></a>
+    <p>{{blog.created_at}}</p>
+{% endfor %}
+
