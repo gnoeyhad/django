@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
 <h1>Edit</h1>
 
 <form action="{% url 'update' blog.id %}" method="POST">
@@ -14,3 +16,4 @@
 </form>
 
 <a href="{% url 'blog' %}">목록으로</a>
+{% endblock %}
